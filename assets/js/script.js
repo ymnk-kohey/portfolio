@@ -22,9 +22,12 @@ function fixHeader() {
 window.addEventListener("scroll", fixHeader);
 
 document.addEventListener('DOMContentLoaded', function() {
+  console.log("JavaScript is loaded and DOM is fully loaded");
   var items = document.querySelectorAll('.job-company1-contacttag ul li');
   items.forEach(function(item) {
+      console.log("Item found: ", item.textContent);
       item.addEventListener('click', function() {
+          console.log("Item clicked: ", this.textContent);
           this.classList.toggle('clicked');
       });
   });
