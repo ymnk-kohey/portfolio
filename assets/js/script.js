@@ -20,3 +20,13 @@ function fixHeader() {
 
 // スクロールイベントリスナーを追加する
 window.addEventListener("scroll", fixHeader);
+
+document.addEventListener('DOMContentLoaded', function() {
+  var items = document.querySelectorAll('.job-company1-contacttag ul li');
+  items.forEach(function(item) {
+      item.addEventListener('click', function() {
+          this.classList.toggle('clicked');
+      });
+  });
+});
+
