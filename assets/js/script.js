@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
       item.addEventListener('click', function() {
           console.log("Item clicked: ", this.textContent);
           this.classList.toggle('clicked');
+          console.log("Class list: ", this.classList);
       });
   });
 });
