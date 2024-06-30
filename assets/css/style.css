@@ -11,7 +11,7 @@ p {
 
 .site-header {
   position: relative;
-  z-index: 0;
+  z-index: 4;
   background-color: #ffffff;
   box-shadow: 0 4px 11px 1px #000;
   max-width: 94%;
@@ -60,7 +60,7 @@ p {
   text-decoration: none;
   font-size: 1rem;
   font-weight: 400;
-  background-image: linear-gradient(#7f8480, #7f8480);
+  background-image: linear-gradient(#123d83, #123d83);
   background-size: 0 2px;
   background-position: left bottom;
   background-repeat: no-repeat;
@@ -70,7 +70,7 @@ p {
 }
 .nav-contents .ul-list a:hover {
   background-size: 100% 2px;
-  color: #018326;
+  color: #123d83;
 }
 
 .github-btn {
@@ -93,7 +93,7 @@ p {
 }
 .github-btn .github-link:hover {
   color: #fff;
-  background-color: #018326;
+  background-color: #0074ac;
   box-shadow: none;
   transform: translateY(2px);
   transition: 0.2s;
@@ -120,6 +120,7 @@ p {
 .sns-icon {
   position: fixed;
   padding: 83px 0px 0px 45px;
+  z-index: 1;
 }
 
 .instagram-icon {
@@ -139,7 +140,7 @@ p {
   transition: 0.3s;
 }
 .instagram-icon a:hover {
-  background-color: #d7ffd5;
+  background-color: #bffff4;
   transform: scale(1.1);
 }
 
@@ -159,7 +160,7 @@ p {
   transition: 0.3s;
 }
 .facebook-icon a:hover {
-  background-color: #d7ffd5;
+  background-color: #bffff4;
   transform: scale(1.1);
 }
 
@@ -176,7 +177,7 @@ p {
   transition: 0.3s;
 }
 .x-icon a:hover {
-  background-color: #d7ffd5;
+  background-color: #bffff4;
   transform: scale(1.1);
 }
 
@@ -193,13 +194,16 @@ p {
   line-height: 1.2;
 }
 .mv-contents .mv-jobtype-text {
-  color: #3dff00;
+  color: #00fff6;
 }
 .mv-contents img {
   max-width: 30%;
   margin-left: 64.2%;
   margin-top: 163px;
   border-radius: 45px;
+  user-drag: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
 }
 
 .scroll-animation {
@@ -223,7 +227,7 @@ p {
   left: 21px;
   width: 1px;
   height: 30px;
-  background-color: #fff;
+  background-color: #00fff6;
   animation: pathmove 1.8s ease-in-out infinite;
   opacity: 0;
 }
@@ -244,20 +248,23 @@ p {
   }
 }
 
-.job-contents .job-title {
-  padding: 1.8vw 3.5vw;
-  margin: 3.5vw 14vw;
-  background-color: #c9ffb8;
-  font-size: 1.9vw;
-  color: #282828;
-  letter-spacing: 0.5rem;
-  border-radius: 1.3vw;
+.job-contents .job-contents-frame {
+  padding: 7.5vw 9vw;
+  margin: 0 8.5vw;
+  background-color: #1f1f1f;
+  border-radius: 1.5vw;
 }
-.job-contents .job-company1 {
-  padding: 1vw 1.5vw;
-  margin: 0px 16.2vw;
+.job-contents .job-contents-frame .job-title {
+  font-size: 5vw;
+  color: #ffffff;
+  letter-spacing: 2.5vw;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 3.5vw;
 }
-.job-contents .job-company1 a {
+.job-contents .job-contents-frame .job-company1 a,
+.job-contents .job-contents-frame .job-company2 a,
+.job-contents .job-contents-frame .job-company3 a {
   padding: 1.6vw 3.5vw;
   font-size: 1.6vw;
   color: #fff;
@@ -265,50 +272,148 @@ p {
   text-decoration: none;
   border-left: 5px solid #ffffff;
 }
-.job-contents .job-company1 a:hover {
-  color: #3dff00;
-  border-color: #3dff00;
+.job-contents .job-contents-frame .job-company1 a:hover,
+.job-contents .job-contents-frame .job-company2 a:hover,
+.job-contents .job-contents-frame .job-company3 a:hover {
+  color: #00fff6;
+  border-color: #00fff6;
   transition: 0.3s;
 }
-.job-contents .job-company1 svg {
+.job-contents .job-contents-frame .job-company1 svg,
+.job-contents .job-contents-frame .job-company2 svg,
+.job-contents .job-contents-frame .job-company3 svg {
   width: 2.1vw;
   height: 1.4vw;
 }
-.job-contents .job-company1 .job-company1-text1 {
-  font-size: 1.2vw;
+.job-contents .job-contents-frame .job-company1 .job-company2-margin,
+.job-contents .job-contents-frame .job-company1 .job-company3-margin,
+.job-contents .job-contents-frame .job-company2 .job-company2-margin,
+.job-contents .job-contents-frame .job-company2 .job-company3-margin,
+.job-contents .job-contents-frame .job-company3 .job-company2-margin,
+.job-contents .job-contents-frame .job-company3 .job-company3-margin {
+  padding-top: 4vw;
+}
+.job-contents .job-contents-frame .job-company1 .job-company1-text1,
+.job-contents .job-contents-frame .job-company1 .job-company2-text1,
+.job-contents .job-contents-frame .job-company1 .job-company3-text1,
+.job-contents .job-contents-frame .job-company2 .job-company1-text1,
+.job-contents .job-contents-frame .job-company2 .job-company2-text1,
+.job-contents .job-contents-frame .job-company2 .job-company3-text1,
+.job-contents .job-contents-frame .job-company3 .job-company1-text1,
+.job-contents .job-contents-frame .job-company3 .job-company2-text1,
+.job-contents .job-contents-frame .job-company3 .job-company3-text1 {
+  font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 0.25vw;
   margin-top: 3.8vw;
 }
-.job-contents .job-company1 .job-company1-text2 {
-  font-size: 1.2vw;
-  font-weight: 300;
+.job-contents .job-contents-frame .job-company1 .job-company1-text2,
+.job-contents .job-contents-frame .job-company1 .job-company2-text2,
+.job-contents .job-contents-frame .job-company1 .job-company3-text2,
+.job-contents .job-contents-frame .job-company2 .job-company1-text2,
+.job-contents .job-contents-frame .job-company2 .job-company2-text2,
+.job-contents .job-contents-frame .job-company2 .job-company3-text2,
+.job-contents .job-contents-frame .job-company3 .job-company1-text2,
+.job-contents .job-contents-frame .job-company3 .job-company2-text2,
+.job-contents .job-contents-frame .job-company3 .job-company3-text2 {
+  font-size: 1.2rem;
+  font-weight: 100;
   letter-spacing: 0.25vw;
   margin: 2.2vw 0;
 }
-.job-contents .job-company1 .job-company1-image img {
-  display: inline-block;
+.job-contents .job-contents-frame .job-company1 .job-company1-text2 span,
+.job-contents .job-contents-frame .job-company1 .job-company2-text2 span,
+.job-contents .job-contents-frame .job-company1 .job-company3-text2 span,
+.job-contents .job-contents-frame .job-company2 .job-company1-text2 span,
+.job-contents .job-contents-frame .job-company2 .job-company2-text2 span,
+.job-contents .job-contents-frame .job-company2 .job-company3-text2 span,
+.job-contents .job-contents-frame .job-company3 .job-company1-text2 span,
+.job-contents .job-contents-frame .job-company3 .job-company2-text2 span,
+.job-contents .job-contents-frame .job-company3 .job-company3-text2 span {
+  font-weight: 500;
+}
+.job-contents .job-contents-frame .job-company1 .job-company3-text3,
+.job-contents .job-contents-frame .job-company2 .job-company3-text3,
+.job-contents .job-contents-frame .job-company3 .job-company3-text3 {
+  font-size: 1.2rem;
+  font-weight: 100;
+  letter-spacing: 0.25vw;
+}
+.job-contents .job-contents-frame .job-company1 .job-company3-text3 span,
+.job-contents .job-contents-frame .job-company2 .job-company3-text3 span,
+.job-contents .job-contents-frame .job-company3 .job-company3-text3 span {
+  font-weight: 500;
+}
+.job-contents .job-contents-frame .job-company1 .job-company3-text3 .job-company3-link,
+.job-contents .job-contents-frame .job-company2 .job-company3-text3 .job-company3-link,
+.job-contents .job-contents-frame .job-company3 .job-company3-text3 .job-company3-link {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+  border-left: none;
+  padding: 0;
+  text-decoration: none;
+  letter-spacing: 0.25vw;
+}
+.job-contents .job-contents-frame .job-company1 .job-company3-text3 .job-company3-link:hover,
+.job-contents .job-contents-frame .job-company2 .job-company3-text3 .job-company3-link:hover,
+.job-contents .job-contents-frame .job-company3 .job-company3-text3 .job-company3-link:hover {
+  color: #00fff6;
+}
+.job-contents .job-contents-frame .job-company1 .job-company1-image,
+.job-contents .job-contents-frame .job-company1 .job-company3-image,
+.job-contents .job-contents-frame .job-company2 .job-company1-image,
+.job-contents .job-contents-frame .job-company2 .job-company3-image,
+.job-contents .job-contents-frame .job-company3 .job-company1-image,
+.job-contents .job-contents-frame .job-company3 .job-company3-image {
+  display: flex;
+  justify-content: center;
+}
+.job-contents .job-contents-frame .job-company1 .job-company1-image img,
+.job-contents .job-contents-frame .job-company1 .job-company3-image img,
+.job-contents .job-contents-frame .job-company2 .job-company1-image img,
+.job-contents .job-contents-frame .job-company2 .job-company3-image img,
+.job-contents .job-contents-frame .job-company3 .job-company1-image img,
+.job-contents .job-contents-frame .job-company3 .job-company3-image img {
   border-radius: 1.4vw;
   max-width: 48%;
-  margin-left: 1.1vw;
   margin-bottom: 2.2vw;
+  user-drag: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
 }
-.job-contents .job-company1 .job-company1-contacttag {
+.job-contents .job-contents-frame .job-company1 .job-company1-image img:first-child,
+.job-contents .job-contents-frame .job-company1 .job-company3-image img:first-child,
+.job-contents .job-contents-frame .job-company2 .job-company1-image img:first-child,
+.job-contents .job-contents-frame .job-company2 .job-company3-image img:first-child,
+.job-contents .job-contents-frame .job-company3 .job-company1-image img:first-child,
+.job-contents .job-contents-frame .job-company3 .job-company3-image img:first-child {
+  margin-right: 3.8%;
+}
+.job-contents .job-contents-frame .job-company1 .job-company1-contacttag,
+.job-contents .job-contents-frame .job-company2 .job-company1-contacttag,
+.job-contents .job-contents-frame .job-company3 .job-company1-contacttag {
   display: flex;
 }
-.job-contents .job-company1 .job-company1-contacttag p {
+.job-contents .job-contents-frame .job-company1 .job-company1-contacttag p,
+.job-contents .job-contents-frame .job-company2 .job-company1-contacttag p,
+.job-contents .job-contents-frame .job-company3 .job-company1-contacttag p {
   font-size: 1.4vw;
   font-weight: 500;
   letter-spacing: 0.25vw;
   margin: 1.5vw 0;
 }
-.job-contents .job-company1 .job-company1-contacttag ul {
+.job-contents .job-contents-frame .job-company1 .job-company1-contacttag ul,
+.job-contents .job-contents-frame .job-company2 .job-company1-contacttag ul,
+.job-contents .job-contents-frame .job-company3 .job-company1-contacttag ul {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.job-contents .job-company1 .job-company1-contacttag ul li {
+.job-contents .job-contents-frame .job-company1 .job-company1-contacttag ul li,
+.job-contents .job-contents-frame .job-company2 .job-company1-contacttag ul li,
+.job-contents .job-contents-frame .job-company3 .job-company1-contacttag ul li {
   position: relative;
   text-align: center;
   width: fit-content;
@@ -316,8 +421,8 @@ p {
   font-size: 1.4vw;
   font-weight: 500;
   letter-spacing: 0.1vw;
-  color: #3dff00;
-  border: 0.1vw solid #3dff00;
+  color: #0081ff;
+  border: 0.1vw solid #0081ff;
   border-radius: 0.6vw;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -330,7 +435,9 @@ p {
   padding: 0.39vw 0.9vw;
   z-index: 3;
 }
-.job-contents .job-company1 .job-company1-contacttag ul li::before {
+.job-contents .job-contents-frame .job-company1 .job-company1-contacttag ul li::before,
+.job-contents .job-contents-frame .job-company2 .job-company1-contacttag ul li::before,
+.job-contents .job-contents-frame .job-company3 .job-company1-contacttag ul li::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -343,32 +450,44 @@ p {
   transition: 0.7s;
   transform-origin: left top;
 }
-.job-contents .job-company1 .job-company1-contacttag ul li:hover {
+.job-contents .job-contents-frame .job-company1 .job-company1-contacttag ul li:hover,
+.job-contents .job-contents-frame .job-company2 .job-company1-contacttag ul li:hover,
+.job-contents .job-contents-frame .job-company3 .job-company1-contacttag ul li:hover {
   color: #fff;
   border: 1px solid #000;
   transition: 0.7s;
 }
-.job-contents .job-company1 .job-company1-contacttag ul li:hover::before {
+.job-contents .job-contents-frame .job-company1 .job-company1-contacttag ul li:hover::before,
+.job-contents .job-contents-frame .job-company2 .job-company1-contacttag ul li:hover::before,
+.job-contents .job-contents-frame .job-company3 .job-company1-contacttag ul li:hover::before {
   transform: scale(1, 1);
 }
-.job-contents .job-company1 .job-company1-businesstag {
+.job-contents .job-contents-frame .job-company1 .job-company1-businesstag,
+.job-contents .job-contents-frame .job-company2 .job-company1-businesstag,
+.job-contents .job-contents-frame .job-company3 .job-company1-businesstag {
   display: flex;
 }
-.job-contents .job-company1 .job-company1-businesstag p {
-  width: 16.2vw;
+.job-contents .job-contents-frame .job-company1 .job-company1-businesstag p,
+.job-contents .job-contents-frame .job-company2 .job-company1-businesstag p,
+.job-contents .job-contents-frame .job-company3 .job-company1-businesstag p {
+  width: 17.8vw;
   font-size: 1.4vw;
   font-weight: 500;
   letter-spacing: 0.25vw;
   margin: 1.5vw 0;
 }
-.job-contents .job-company1 .job-company1-businesstag ul {
+.job-contents .job-contents-frame .job-company1 .job-company1-businesstag ul,
+.job-contents .job-contents-frame .job-company2 .job-company1-businesstag ul,
+.job-contents .job-contents-frame .job-company3 .job-company1-businesstag ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.job-contents .job-company1 .job-company1-businesstag ul li {
+.job-contents .job-contents-frame .job-company1 .job-company1-businesstag ul li,
+.job-contents .job-contents-frame .job-company2 .job-company1-businesstag ul li,
+.job-contents .job-contents-frame .job-company3 .job-company1-businesstag ul li {
   position: relative;
   text-align: center;
   width: fit-content;
@@ -388,7 +507,9 @@ p {
   padding: 0.39vw 0.9vw;
   z-index: 3;
 }
-.job-contents .job-company1 .job-company1-businesstag ul li::before {
+.job-contents .job-contents-frame .job-company1 .job-company1-businesstag ul li::before,
+.job-contents .job-contents-frame .job-company2 .job-company1-businesstag ul li::before,
+.job-contents .job-contents-frame .job-company3 .job-company1-businesstag ul li::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -401,31 +522,43 @@ p {
   transition: 0.7s;
   transform-origin: left top;
 }
-.job-contents .job-company1 .job-company1-businesstag ul li:hover {
+.job-contents .job-contents-frame .job-company1 .job-company1-businesstag ul li:hover,
+.job-contents .job-contents-frame .job-company2 .job-company1-businesstag ul li:hover,
+.job-contents .job-contents-frame .job-company3 .job-company1-businesstag ul li:hover {
   color: #fff;
   border: 1px solid #949494;
   transition: 0.7s;
 }
-.job-contents .job-company1 .job-company1-businesstag ul li:hover::before {
+.job-contents .job-contents-frame .job-company1 .job-company1-businesstag ul li:hover::before,
+.job-contents .job-contents-frame .job-company2 .job-company1-businesstag ul li:hover::before,
+.job-contents .job-contents-frame .job-company3 .job-company1-businesstag ul li:hover::before {
   transform: scale(1, 1);
 }
-.job-contents .job-company1 .job-company1-designtag {
+.job-contents .job-contents-frame .job-company1 .job-company1-designtag,
+.job-contents .job-contents-frame .job-company2 .job-company1-designtag,
+.job-contents .job-contents-frame .job-company3 .job-company1-designtag {
   display: flex;
 }
-.job-contents .job-company1 .job-company1-designtag p {
+.job-contents .job-contents-frame .job-company1 .job-company1-designtag p,
+.job-contents .job-contents-frame .job-company2 .job-company1-designtag p,
+.job-contents .job-contents-frame .job-company3 .job-company1-designtag p {
   width: 8.2vw;
   font-size: 1.4vw;
   font-weight: 500;
   letter-spacing: 0.25vw;
   margin: 1.5vw 0;
 }
-.job-contents .job-company1 .job-company1-designtag ul {
+.job-contents .job-contents-frame .job-company1 .job-company1-designtag ul,
+.job-contents .job-contents-frame .job-company2 .job-company1-designtag ul,
+.job-contents .job-contents-frame .job-company3 .job-company1-designtag ul {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.job-contents .job-company1 .job-company1-designtag ul li {
+.job-contents .job-contents-frame .job-company1 .job-company1-designtag ul li,
+.job-contents .job-contents-frame .job-company2 .job-company1-designtag ul li,
+.job-contents .job-contents-frame .job-company3 .job-company1-designtag ul li {
   position: relative;
   text-align: center;
   width: fit-content;
@@ -433,8 +566,8 @@ p {
   font-size: 1.4vw;
   font-weight: 500;
   letter-spacing: 0.1vw;
-  color: #f1ff00;
-  border: 0.1vw solid #f1ff00;
+  color: #00ff8e;
+  border: 0.1vw solid #00ff8e;
   border-radius: 0.6vw;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -447,7 +580,9 @@ p {
   padding: 0.39vw 0.9vw;
   z-index: 3;
 }
-.job-contents .job-company1 .job-company1-designtag ul li::before {
+.job-contents .job-contents-frame .job-company1 .job-company1-designtag ul li::before,
+.job-contents .job-contents-frame .job-company2 .job-company1-designtag ul li::before,
+.job-contents .job-contents-frame .job-company3 .job-company1-designtag ul li::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -460,11 +595,127 @@ p {
   transition: 0.7s;
   transform-origin: left top;
 }
-.job-contents .job-company1 .job-company1-designtag ul li:hover {
+.job-contents .job-contents-frame .job-company1 .job-company1-designtag ul li:hover,
+.job-contents .job-contents-frame .job-company2 .job-company1-designtag ul li:hover,
+.job-contents .job-contents-frame .job-company3 .job-company1-designtag ul li:hover {
   color: #000;
   border: 1px solid #fff;
   transition: 0.7s;
 }
-.job-contents .job-company1 .job-company1-designtag ul li:hover::before {
+.job-contents .job-contents-frame .job-company1 .job-company1-designtag ul li:hover::before,
+.job-contents .job-contents-frame .job-company2 .job-company1-designtag ul li:hover::before,
+.job-contents .job-contents-frame .job-company3 .job-company1-designtag ul li:hover::before {
   transform: scale(1, 1);
+}
+
+.achievements-loop {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 9vw;
+  padding-top: 7.5vw;
+}
+.achievements-loop .achievements-loop-list {
+  display: flex;
+  animation: loop-slide 70s infinite linear 1s both;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.achievements-loop .achievements-loop-list .achievements-loop-text {
+  font-size: 9vw;
+  font-weight: 800;
+  color: #123d83;
+  -webkit-text-stroke-width: 0.05vw;
+  -webkit-text-stroke-color: #00fff6;
+  width: 115vw;
+}
+@keyframes loop-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.achievements-contents-frame {
+  padding: 7.5vw 9vw 7.5vw 9vw;
+  margin: 0 8.5vw;
+}
+.achievements-contents-frame .achievements-title {
+  text-align: center;
+  font-size: 5vw;
+  color: #fff;
+  letter-spacing: 2.5vw;
+  margin: 0;
+  padding-bottom: 3.5vw;
+}
+.achievements-contents-frame .achievements-text {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 100;
+  letter-spacing: 0.25vw;
+}
+.achievements-contents-frame .achievements-text span {
+  font-size: 1.4rem;
+  color: #00fff6;
+}
+
+.splide-contents-frame {
+  padding: 0 9vw;
+  margin: 0 8.5vw;
+}
+.splide-contents-frame .splide__slide {
+  height: auto;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.25vw;
+  text-align: center;
+  color: #123d83;
+}
+.splide-contents-frame .splide__slide img {
+  width: 100%;
+  height: 31.3vw;
+  object-fit: cover;
+  border-radius: 1.4vw;
+}
+.splide-contents-frame .splide__pagination {
+  bottom: -4vw;
+}
+.splide-contents-frame .splide__pagination__page {
+  width: 1.2vw;
+  height: 1.2vw;
+  background: #00fff6;
+  margin-left: 1.2vw;
+}
+.splide-contents-frame .splide__arrow {
+  position: absolute;
+  align-items: center;
+  width: 4.2vw;
+  height: 4.2vw;
+  background: #00fff6;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  opacity: 0.7;
+  padding: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.splide-contents-frame .splide__arrow svg {
+  fill: #123d83;
+  height: 1.6em;
+  width: 1.6em;
+}
+.splide-contents-frame .splide__arrow--prev {
+  margin-left: 2vw;
+  box-shadow: 0px 2px 7px 0px #000;
+}
+.splide-contents-frame .splide__arrow--next {
+  margin-right: 2vw;
+  box-shadow: 0px 2px 7px 0px #000;
 }

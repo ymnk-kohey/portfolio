@@ -1,5 +1,5 @@
 /*
-画面上部のヘッダー固定の記述
+画面上部ヘッダー固定の記述
 */
 // HTMLからヘッダー要素を取得
 const header = document.getElementById("header");
@@ -20,3 +20,31 @@ function fixHeader() {
 
 // スクロールイベントリスナーを追加する
 window.addEventListener("scroll", fixHeader);
+
+/*
+サイト内画像の右クリックを禁止
+*/
+document.addEventListener('DOMContentLoaded', (event) => {
+  document.querySelectorAll('img').forEach((img) => {
+      img.addEventListener('contextmenu', (e) => {
+          e.preventDefault();
+      });
+  });
+});
+
+/*
+splideの記述
+*/
+document.addEventListener('DOMContentLoaded', function () {
+  new Splide('.splide', {
+      type: 'fade',
+      // perPage: 1,
+      autoplay: true, 
+      pauseOnHover: false,
+      rewind: true, //画像が最後まで行った場合、巻き戻って初めからスライドさせるかどうかの設定
+      rewindByDrag: true, //ドラッグまたはスワイプ操作でもスライダーを巻き戻せるかどうかの設定。「rewind」オプションを有効にしないと動作しない。
+      // width: '80%',
+      // height: '42rem',
+      speed: number = 1200 //画像と画像が切り替わるときのスピード設定
+  }).mount();
+});
