@@ -351,14 +351,16 @@ p {
   font-weight: 500;
   color: #fff;
   border-left: none;
+  border-bottom: 1px solid #fff;
   padding: 0;
-  text-decoration: none;
+  padding-bottom: 0.1vw;
   letter-spacing: 0.25vw;
 }
 .job-contents .job-contents-frame .job-company1 .job-company3-text3 .job-company3-link:hover,
 .job-contents .job-contents-frame .job-company2 .job-company3-text3 .job-company3-link:hover,
 .job-contents .job-contents-frame .job-company3 .job-company3-text3 .job-company3-link:hover {
   color: #00fff6;
+  border-color: #00fff6;
 }
 .job-contents .job-contents-frame .job-company1 .job-company1-image,
 .job-contents .job-contents-frame .job-company1 .job-company3-image,
@@ -640,7 +642,7 @@ p {
 }
 
 .achievements-contents-frame {
-  padding: 7.5vw 9vw 7.5vw 9vw;
+  padding: 7.5vw 9vw 5vw 9vw;
   margin: 0 8.5vw;
 }
 .achievements-contents-frame .achievements-title {
@@ -718,4 +720,28 @@ p {
 .splide-contents-frame .splide__arrow--next {
   margin-right: 2vw;
   box-shadow: 0px 2px 7px 0px #000;
+}
+
+.achievements-link {
+  text-align: center;
+  margin: 7.5vw 0 8.5vw;
+}
+.achievements-link .achievements-link-text {
+  font-size: 1.3rem;
+  font-weight: 100;
+  letter-spacing: 0.25vw;
+  padding-bottom: 4vw;
+}
+.achievements-link .achievements-link-btn {
+  font-size: 1.3rem;
+  font-weight: 100;
+  letter-spacing: 0.25vw;
+  color: #00fff6;
+  border: 1px solid #00fff6;
+  text-decoration: none;
+  border-radius: 0.5vw;
+  padding: 1.5vw 5vw;
+}
+.achievements-link .achievements-link-btn:hover {
+  color: #00fff6;
 }
