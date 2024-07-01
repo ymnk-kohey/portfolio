@@ -1,8 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Meiryo", "sans-serif";
   margin: 0;
   background-color: #464646;
   color: #fff;
+  overflow: hidden;
 }
 
 p {
@@ -21,7 +26,7 @@ p {
 }
 .site-header .logo {
   margin: 0;
-  padding: 18px 0px 0px 80px;
+  padding: 18px 0px 0px 50px;
 }
 .site-header .logo img {
   width: 2.8rem;
@@ -34,7 +39,7 @@ p {
 .site-header h1 {
   position: absolute;
   top: 22px;
-  left: 135px;
+  left: 110px;
   font-size: 1.4rem;
   font-weight: bolder;
   color: #282828;
@@ -44,7 +49,7 @@ p {
 .nav-contents {
   position: absolute;
   top: 27px;
-  right: 207px;
+  right: 170px;
   z-index: 1;
 }
 .nav-contents .ul-list {
@@ -79,7 +84,7 @@ p {
 .github-btn .github-link {
   position: absolute;
   bottom: -7px;
-  left: 505px;
+  left: 539px;
   text-decoration: none;
   font-size: 1rem;
   font-weight: 600;
@@ -249,14 +254,13 @@ p {
 }
 
 .job-contents .job-contents-frame {
-  padding: 7.5vw 9vw;
+  padding: 7.5rem 9vw;
   margin: 0 8.5vw;
   background-color: #1f1f1f;
   border-radius: 1.5vw;
 }
 .job-contents .job-contents-frame .job-title {
   font-size: 5vw;
-  color: #ffffff;
   letter-spacing: 2.5vw;
   text-align: center;
   margin: 0;
@@ -355,6 +359,7 @@ p {
   padding: 0;
   padding-bottom: 0.1vw;
   letter-spacing: 0.25vw;
+  transition: all 0.4s;
 }
 .job-contents .job-contents-frame .job-company1 .job-company3-text3 .job-company3-link:hover,
 .job-contents .job-contents-frame .job-company2 .job-company3-text3 .job-company3-link:hover,
@@ -377,7 +382,7 @@ p {
 .job-contents .job-contents-frame .job-company2 .job-company3-image img,
 .job-contents .job-contents-frame .job-company3 .job-company1-image img,
 .job-contents .job-contents-frame .job-company3 .job-company3-image img {
-  border-radius: 1.4vw;
+  border-radius: 0.9vw;
   max-width: 48%;
   margin-bottom: 2.2vw;
   user-drag: none;
@@ -425,7 +430,7 @@ p {
   letter-spacing: 0.1vw;
   color: #0081ff;
   border: 0.1vw solid #0081ff;
-  border-radius: 0.6vw;
+  border-radius: 0.4vw;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -499,7 +504,7 @@ p {
   letter-spacing: 0.1vw;
   color: #00fff6;
   border: 0.1vw solid #00fff6;
-  border-radius: 0.6vw;
+  border-radius: 0.4vw;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -570,7 +575,7 @@ p {
   letter-spacing: 0.1vw;
   color: #00ff8e;
   border: 0.1vw solid #00ff8e;
-  border-radius: 0.6vw;
+  border-radius: 0.4vw;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -626,10 +631,10 @@ p {
 }
 .achievements-loop .achievements-loop-list .achievements-loop-text {
   font-size: 9vw;
-  font-weight: 800;
+  font-weight: 900;
   color: #123d83;
   -webkit-text-stroke-width: 0.05vw;
-  -webkit-text-stroke-color: #00fff6;
+  -webkit-text-stroke-color: #fff;
   width: 115vw;
 }
 @keyframes loop-slide {
@@ -680,7 +685,7 @@ p {
   width: 100%;
   height: 31.3vw;
   object-fit: cover;
-  border-radius: 1.4vw;
+  border-radius: 0.9vw;
 }
 .splide-contents-frame .splide__pagination {
   bottom: -4vw;
@@ -734,14 +739,106 @@ p {
 }
 .achievements-link .achievements-link-btn {
   font-size: 1.3rem;
-  font-weight: 100;
+  font-weight: 300;
   letter-spacing: 0.25vw;
   color: #00fff6;
   border: 1px solid #00fff6;
   text-decoration: none;
   border-radius: 0.5vw;
   padding: 1.5vw 5vw;
+  transition: all 0.4s;
 }
 .achievements-link .achievements-link-btn:hover {
-  color: #00fff6;
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: #123d83;
+}
+
+.background-contents-frame {
+  padding: 7.5rem 3.5vw;
+  background-color: #1f1f1f;
+}
+.background-contents-frame .background-title {
+  text-align: center;
+  font-size: 5vw;
+  letter-spacing: 1.5vw;
+  padding-bottom: 3.5vw;
+  margin: 0;
+}
+.background-contents-frame .background-title-text {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 100;
+  letter-spacing: 0.25vw;
+  padding-bottom: 3.5vw;
+}
+
+.background-conainer {
+  display: flex;
+  justify-content: center;
+}
+.background-conainer .background-contents {
+  flex: 0 1 auto;
+  max-width: 25.8vw;
+  min-width: 25.8vw;
+  width: auto;
+  height: auto;
+  background-color: #0e0e0e;
+  border-radius: 0.5vw;
+  margin: 0 1vw;
+  padding: 10px;
+  box-shadow: 0 0 0.5vw #000;
+}
+.background-conainer .background-contents-type {
+  font-size: 1rem;
+  font-weight: 100;
+  letter-spacing: 0.25vw;
+  color: #acacac;
+  margin: 1.5vw 1.5vw 0;
+}
+.background-conainer .background-contents-title {
+  font-size: 2.8vw;
+  font-weight: 500;
+  letter-spacing: 0.25vw;
+  margin: 0 1.2vw 1.5vw;
+}
+.background-conainer img {
+  display: block;
+  margin: 0 auto;
+  max-width: 80%;
+  border-radius: 0.5vw;
+  user-drag: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+}
+.background-conainer .background-contents-text {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 100;
+  letter-spacing: 0.1vw;
+  margin: 1.5vw 1.2vw;
+}
+.background-conainer svg {
+  display: block;
+  margin: 0 auto;
+}
+
+.background-contents-end {
+  text-align: center;
+  font-size: 4vw;
+  font-weight: 700;
+  letter-spacing: 1.5vw;
+  padding-top: 7.5vw;
+}
+
+footer {
+  background-color: #1f1f1f;
+  padding: 0vw 10vw 4vw;
+}
+footer p {
+  font-size: 1rem;
+  font-weight: 100;
+  letter-spacing: 0.3rem;
+  border-top: 1px solid #fff;
+  padding-top: 1.4rem;
 }
